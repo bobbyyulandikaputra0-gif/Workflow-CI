@@ -1,0 +1,11 @@
+name: bank-marketing-ci
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data_dir: {type: string, default: "bank_marketing_preprocessing"}
+      n_estimators: {type: float, default: 200}
+      max_depth: {type: float, default: 20}
+    command: "python modelling.py --data_dir {data_dir} --n_estimators {n_estimators} --max_depth {max_depth}"
