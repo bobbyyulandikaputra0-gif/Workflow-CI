@@ -15,6 +15,9 @@ on:
         description: "Kedalaman maksimum (0 = None)"
         default: "20"
 
+permissions:
+  contents: write
+
 jobs:
   retrain:
     runs-on: ubuntu-latest
